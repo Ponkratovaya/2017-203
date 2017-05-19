@@ -174,13 +174,13 @@ void ponkratovayv::lab5()
         error = std::abs(alt[0]-x[0]);
         for(int i=0; i<N; i++)
         {
-            if(std::abs(xold[i]-x[i]) > error)
-                error = std::abs(xold[i]-x[i]);
+            if(std::abs(alt[i]-x[i]) > error)
+                error = std::abs(alt[i]-x[i]);
         }
     } while(error >= eps);
     std::cout << "Чило итераций : " << k << std::endl;
 
-    delete [] xold;
+    delete [] alt;
 }
 
 
@@ -223,7 +223,7 @@ double *alt = new double[N];
     while(error >= eps);
     std::cout << "Чило итераций : " << k << std::endl;
 
-    delete [] xold;
+    delete [] alt;
 }
 
 
